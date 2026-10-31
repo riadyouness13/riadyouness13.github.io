@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Riad Youness — ePortfolio</title>
+  <meta name="description" content="ePortfolio de Riad Youness, élève-ingénieur en Sciences du Numérique à l'ENSEEIHT (Toulouse INP). IA et data pour le football, l'aviation et l'espace.">
+  <meta name="author" content="Riad Youness">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23eef2f3' stroke='%23b3127a' stroke-width='3'/%3E%3Cpath d='M9 21 L14 11 L19 18 L24 10' fill='none' stroke='%2316263a' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preload" href="assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip" href="#main"><span data-l="fr">Aller au contenu</span><span data-l="en">Skip to content</span></a>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="#welcome"><span class="brand-mark">RY</span>Riad Youness</a>
+    <nav class="tabs" aria-label="Sections">
+      <a href="#welcome" data-tab="welcome"><span data-l="fr">Accueil</span><span data-l="en">Welcome</span></a>
+      <a href="#engineering" data-tab="engineering"><span data-l="fr">Formation d'ingénieur</span><span data-l="en">Engineering course</span></a>
+      <a href="#mobility" data-tab="mobility"><span data-l="fr">Mobilité internationale</span><span data-l="en">International mobility</span></a>
+      <a href="#sustainability" data-tab="sustainability"><span data-l="fr">Développement durable &amp; engagement</span><span data-l="en">Sustainability &amp; civic engagement</span></a>
+      <a href="#sport" data-tab="sport"><span data-l="fr">Sport &amp; activités</span><span data-l="en">Sport &amp; other activities</span></a>
+      <a href="#career" data-tab="career"><span data-l="fr">Projet professionnel</span><span data-l="en">Career development</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Langue / Language">
+      <button type="button" data-set-lang="fr" aria-pressed="true">FR</button>
+      <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ======================= ACCUEIL ======================= -->
+<section class="panel" id="welcome" data-panel="welcome">
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <h1><span>Riad</span><span class="last">Youness</span></h1>
+        <p class="lede" data-l="fr">Élève-ingénieur en Sciences du Numérique à l'ENSEEIHT. Je veux mettre les mathématiques appliquées, l'IA et la data au service du football, de l'aviation et de l'espace.</p>
+        <p class="lede" data-l="en">Engineering student in Computer Science &amp; Applied Mathematics at ENSEEIHT. I want to put applied maths, AI and data to work for football, aviation and space.</p>
+        <p class="meta" data-l="fr">1re année, Toulouse INP-ENSEEIHT, promotion 2029</p>
+        <p class="meta" data-l="en">First year, Toulouse INP-ENSEEIHT, class of 2029</p>
+        <div class="actions">
+          <a class="btn btn-primary" data-l="fr" href="cv/CV_Riad_Youness_FR.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M5 21h14"/></svg>Mon CV</a>
+          <a class="btn btn-primary" data-l="en" href="cv/CV_Riad_Youness_EN.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M5 21h14"/></svg>My résumé</a>
+          <a class="btn btn-ghost" href="#career/pitch"><span data-l="fr">Voir mon pitch vidéo</span><span data-l="en">Watch my video pitch</span></a>
+        </div>
+      </div>
+
+      <figure class="chart" id="tsp">
+        <svg id="tsp-svg" viewBox="0 0 520 400" role="img" aria-labelledby="tsp-title">
+          <title id="tsp-title">Carte d'un road-trip européen de 14 villes optimisé par différents algorithmes</title>
+        </svg>
+        <div class="chart-bar">
+          <span class="chart-dist" id="tsp-dist" aria-live="polite">—</span>
+          <span class="chart-algo"><span id="tsp-algo"></span> <span class="chart-gap" id="tsp-gap"></span></span>
+        </div>
+        <div class="algos" role="group" aria-label="Algorithmes">
+          <button type="button" data-algo="random"><span data-l="fr">Ordre aléatoire</span><span data-l="en">Random order</span></button>
+          <button type="button" data-algo="nn"><span data-l="fr">Plus proche voisin</span><span data-l="en">Nearest neighbour</span></button>
+          <button type="button" data-algo="twoopt">2-opt</button>
+          <button type="button" data-algo="sa"><span data-l="fr">Recuit simulé</span><span data-l="en">Simulated annealing</span></button>
+        </div>
+        <figcaption>
+          <span data-l="fr">Un road-trip de 14 villes au départ de Toulouse : le problème du voyageur de commerce, sujet de mon TIPE. Testez les algorithmes, l'écart est mesuré par rapport à l'optimum exact. <a href="#engineering/projects">Voir le projet</a></span>
+          <span data-l="en">A 14-city road trip starting from Toulouse: the travelling salesman problem, topic of my research project. Try the algorithms; the gap is measured against the exact optimum. <a href="#engineering/projects">See the project</a></span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="about">
+      <div class="portrait">
+        <span class="initials" aria-hidden="true">RY</span>
+        <img src="assets/photo.jpg" alt="Photo de Riad Youness" onerror="this.remove()">
+      </div>
+      <div>
+        <h2><span data-l="fr">Bonjour, je suis Riad</span><span data-l="en">Hi, I'm Riad</span></h2>
+        <div data-l="fr">
+          <p>Après un bac scientifique à Casablanca et deux années de classes préparatoires MPSI puis MP, j'ai rejoint l'ENSEEIHT en 2026, dans la filière Sciences du Numérique.</p>
+          <p>Ce qui m'anime : trouver la meilleure solution parmi des milliards de possibilités. C'est ce que j'ai exploré dans mon TIPE sur le voyageur de commerce, et c'est ce que font chaque jour les équipes data d'un club de football, d'Airbus ou d'une agence spatiale.</p>
+          <p>Ce portfolio rassemble mon parcours, mes projets et la construction de mon projet professionnel. Il évoluera tout au long de mes trois années d'école.</p>
+        </div>
+        <div data-l="en">
+          <p>After a science baccalaureate in Casablanca and two years of intensive preparatory classes in maths and physics (MPSI, then MP), I joined ENSEEIHT in 2026 in the Computer Science &amp; Applied Maths track.</p>
+          <p>What drives me: finding the best solution among billions of possibilities. I explored it in my research project on the travelling salesman problem, and it is what data teams do every day at a football club, at Airbus or at a space agency.</p>
+          <p>This portfolio brings together my background, my projects and my career plan. It will grow throughout my three years at the school.</p>
+        </div>
+      </div>
+      <div>
+        <h3><span data-l="fr">En ce moment</span><span data-l="en">Right now</span></h3>
+        <ul class="now">
+          <li data-l="fr"><strong>1re année Sciences du Numérique</strong>Probabilités et optimisation sont mes cours préférés.</li>
+          <li data-l="en"><strong>First year, Computer Science &amp; Applied Maths</strong>Probability and optimisation are my favourite courses.</li>
+          <li data-l="fr"><strong>Recherche de stage, été 2027</strong>Data ou IA, dans le football, l'aéronautique ou le spatial.</li>
+          <li data-l="en"><strong>Looking for a summer 2027 internship</strong>Data or AI, in football, aviation or space.</li>
+          <li data-l="fr"><strong>Projet professionnel</strong>Entretiens avec des professionnels via My Job Glasses.</li>
+          <li data-l="en"><strong>Career plan</strong>Interviewing professionals through My Job Glasses.</li>
+        </ul>
+        <h3 style="margin-top:24px"><span data-l="fr">Centres d'intérêt</span><span data-l="en">Interests</span></h3>
+        <ul class="tags" data-l="fr"><li>Football en club</li><li>Randonnée</li><li>Aéronautique et spatial</li><li>Transmettre les maths</li></ul>
+        <ul class="tags" data-l="en"><li>Club football</li><li>Hiking</li><li>Aviation and space</li><li>Teaching maths</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FORMATION ======================= -->
+<section class="panel" id="engineering" data-panel="engineering">
+  <div class="wrap">
+    <div class="panel-head">
+      <h2><span data-l="fr">Formation d'ingénieur</span><span data-l="en">Engineering course</span></h2>
+      <p data-l="fr">Des maths de prépa aux sciences du numérique : mon parcours, mes projets et mes compétences.</p>
+      <p data-l="en">From preparatory-class maths to computer science: my path, my projects and my skills.</p>
+    </div>
+
+    <div class="subnav" role="tablist" aria-label="Formation">
+      <button type="button" role="tab" data-sub="path"><span data-l="fr">Parcours</span><span data-l="en">Path</span></button>
+      <button type="button" role="tab" data-sub="projects"><span data-l="fr">Projets</span><span data-l="en">Projects</span></button>
+      <button type="button" role="tab" data-sub="skills"><span data-l="fr">Compétences</span><span data-l="en">Skills</span></button>
+    </div>
+
+    <div class="sub" data-subpanel="path" role="tabpanel">
+      <div class="grid-2">
+        <ol class="timeline">
+          <li class="current">
+            <span class="when"><span data-l="fr">Depuis septembre 2026</span><span data-l="en">Since September 2026</span></span>
+            <h3><span data-l="fr">ENSEEIHT, Sciences du Numérique</span><span data-l="en">ENSEEIHT, Computer Science &amp; Applied Maths</span></h3>
+            <p class="muted" data-l="fr">Toulouse INP. Diplôme d'ingénieur, 1re année. Cours marquants : probabilités, optimisation, programmation en Ada.</p>
+            <p class="muted" data-l="en">Toulouse INP. Master's-level engineering degree, first year. Highlights: probability, optimisation, programming in Ada.</p>
+          </li>
+          <li>
+            <span class="when">2025 – 2026</span>
+            <h3><span data-l="fr">Classe préparatoire MP</span><span data-l="en">Preparatory class, MP (maths &amp; physics)</span></h3>
+            <p class="muted" data-l="fr">Lycée d'Excellence Mohammed VI, Casablanca. TIPE sur le problème du voyageur de commerce.</p>
+            <p class="muted" data-l="en">Lycée d'Excellence Mohammed VI, Casablanca. Research project on the travelling salesman problem.</p>
+          </li>
+          <li>
+            <span class="when">2024 – 2025</span>
+            <h3><span data-l="fr">Classe préparatoire MPSI</span><span data-l="en">Preparatory class, MPSI</span></h3>
+            <p class="muted" data-l="fr">Lycée d'Excellence Mohammed VI, Casablanca. Deux années intensives en mathématiques, physique et informatique pour préparer les concours des grandes écoles.</p>
+            <p class="muted" data-l="en">Lycée d'Excellence Mohammed VI, Casablanca. Two intensive years of maths, physics and computer science leading to the national engineering school entrance exams.</p>
+          </li>
+          <li>
+            <span class="when">2024</span>
+            <h3><span data-l="fr">Baccalauréat marocain, Sciences Physiques</span><span data-l="en">Moroccan baccalaureate, Physical Sciences</span></h3>
+            <p class="muted" data-l="fr">Mention Très Bien, Casablanca.</p>
+            <p class="muted" data-l="en">Highest honours (Très Bien), Casablanca.</p>
+          </li>
+        </ol>
+        <div class="block block-feature">
+          <h3><span data-l="fr">Pourquoi l'ENSEEIHT et les Sciences du Numérique</span><span data-l="en">Why ENSEEIHT and this track</span></h3>
+          <div data-l="fr">
+            <p>L'ENSEEIHT est reconnue pour la qualité de sa formation et pour sa proximité avec les entreprises de l'aéronautique et du spatial : Airbus, le CNES et tout l'écosystème toulousain sont à quelques kilomètres.</p>
+            <p>La filière Sciences du Numérique réunit ce que j'aime le plus : les mathématiques, l'informatique et les mathématiques appliquées. C'est la base idéale pour devenir data scientist ou ingénieur en IA.</p>
+          </div>
+          <div data-l="en">
+            <p>ENSEEIHT is known for the quality of its programme and its close ties with the aerospace industry: Airbus, the French space agency CNES and the whole Toulouse ecosystem are a few kilometres away.</p>
+            <p>The Computer Science &amp; Applied Maths track combines what I enjoy most: mathematics, computer science and applied maths. It is the ideal foundation to become a data scientist or an AI engineer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub" data-subpanel="projects" role="tabpanel">
+      <article class="block">
+        <p class="kicker"><span data-l="fr">TIPE, classe préparatoire MP, 2025 – 2026</span><span data-l="en">Research project (TIPE), MP preparatory class, 2025 – 2026</span></p>
+        <h3><span data-l="fr">Le voyageur de commerce : planifier le meilleur road-trip en Europe</span><span data-l="en">The travelling salesman: planning the best road trip across Europe</span></h3>
+        <div data-l="fr">
+          <p><strong>Le problème.</strong> Visiter un ensemble de villes une seule fois et revenir au point de départ en parcourant la distance la plus courte possible. Simple à énoncer, il devient vite impossible à résoudre par énumération : pour 14 villes, il existe déjà plus de 3 milliards de tournées différentes.</p>
+          <p><strong>Ma démarche.</strong> J'ai modélisé le problème avec la théorie des graphes, puis implémenté et comparé en Python quatre approches :</p>
+        </div>
+        <div data-l="en">
+          <p><strong>The problem.</strong> Visit a set of cities exactly once and return to the start along the shortest possible route. Easy to state, it quickly becomes impossible to solve by enumeration: with 14 cities there are already more than 3 billion different tours.</p>
+          <p><strong>My approach.</strong> I modelled the problem with graph theory, then implemented and compared four methods in Python:</p>
+        </div>
+        <div class="methods">
+          <div>
+            <h4><span data-l="fr">Force brute</span><span data-l="en">Brute force</span></h4>
+            <p data-l="fr">Teste toutes les tournées. Solution exacte, mais le temps de calcul explose avec le nombre de villes.</p>
+            <p data-l="en">Tries every tour. Exact, but computing time explodes as cities are added.</p>
+          </div>
+          <div>
+            <h4><span data-l="fr">Plus proche voisin</span><span data-l="en">Nearest neighbour</span></h4>
+            <p data-l="fr">Algorithme glouton : aller toujours à la ville la plus proche. Très rapide, mais souvent loin de l'optimum.</p>
+            <p data-l="en">Greedy: always go to the closest unvisited city. Very fast, but often far from optimal.</p>
+          </div>
+          <div>
+            <h4>2-opt</h4>
+            <p data-l="fr">Amélioration locale : on supprime deux arêtes qui se croisent et on reconnecte la tournée autrement, tant que cela la raccourcit.</p>
+            <p data-l="en">Local search: remove two crossing edges and reconnect the tour, as long as it gets shorter.</p>
+          </div>
+          <div>
+            <h4><span data-l="fr">Recuit simulé</span><span data-l="en">Simulated annealing</span></h4>
+            <p data-l="fr">Métaheuristique inspirée de la métallurgie : accepter parfois une solution moins bonne pour s'échapper des minima locaux.</p>
+            <p data-l="en">A metaheuristic inspired by metallurgy: occasionally accept a worse solution to escape local minima.</p>
+          </div>
+        </div>
+        <div data-l="fr">
+          <p><strong>Applications.</strong> Un road-trip en Europe comme cas d'étude, et les mêmes méthodes pour les tournées de livraison, l'ordonnancement de tâches ou la planification de trajectoires.</p>
+          <p><strong>Ce que j'en retiens.</strong> Le compromis entre qualité de la solution et temps de calcul est au cœur de l'ingénierie. Ce projet m'a donné le goût de l'optimisation, que je retrouve aujourd'hui en cours à l'N7. <a href="#welcome">Essayez les algorithmes sur la page d'accueil.</a></p>
+        </div>
+        <div data-l="en">
+          <p><strong>Applications.</strong> A European road trip as the case study, and the same methods for delivery routes, task scheduling or trajectory planning.</p>
+          <p><strong>What I took away.</strong> The trade-off between solution quality and computing time is at the heart of engineering. This project gave me a taste for optimisation, which I now study at ENSEEIHT. <a href="#welcome">Try the algorithms on the home page.</a></p>
+        </div>
+        <ul class="tags" data-l="fr"><li>Python</li><li>Théorie des graphes</li><li>Optimisation combinatoire</li><li>Heuristiques</li></ul>
+        <ul class="tags" data-l="en"><li>Python</li><li>Graph theory</li><li>Combinatorial optimisation</li><li>Heuristics</li></ul>
+      </article>
+      <p class="muted small" style="margin-top:16px" data-l="fr">Les projets réalisés à l'ENSEEIHT seront ajoutés ici au fil de l'année.</p>
+      <p class="muted small" style="margin-top:16px" data-l="en">Projects completed at ENSEEIHT will be added here throughout the year.</p>
+    </div>
+
+    <div class="sub" data-subpanel="skills" role="tabpanel">
+      <div class="block">
+        <table class="skills-table">
+          <tbody data-l="fr">
+            <tr><th>Programmation</th><td>Python (intermédiaire), Ada (débutant), LaTeX</td></tr>
+            <tr><th>Mathématiques</th><td>Probabilités, optimisation, théorie des graphes, algèbre et analyse (niveau prépa MP)</td></tr>
+            <tr><th>Algorithmique</th><td>Complexité, algorithmes gloutons, recherche locale, métaheuristiques</td></tr>
+            <tr><th>Langues</th><td>Français, anglais et arabe : courant</td></tr>
+            <tr><th>Savoir-être</th><td>Pédagogie (cours particuliers), esprit d'équipe (football en club), persévérance (prépa, randonnée), engagement solidaire</td></tr>
+          </tbody>
+          <tbody data-l="en">
+            <tr><th>Programming</th><td>Python (intermediate), Ada (beginner), LaTeX</td></tr>
+            <tr><th>Mathematics</th><td>Probability, optimisation, graph theory, algebra and analysis (French preparatory class level)</td></tr>
+            <tr><th>Algorithms</th><td>Complexity, greedy algorithms, local search, metaheuristics</td></tr>
+            <tr><th>Languages</th><td>French, English and Arabic: fluent</td></tr>
+            <tr><th>Soft skills</th><td>Teaching (private maths tutoring), teamwork (club football), perseverance (preparatory classes, hiking), community commitment</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="block" style="margin-top:20px">
+        <h3><span data-l="fr">Prochaines compétences à acquérir</span><span data-l="en">Next skills to build</span></h3>
+        <p data-l="fr">Pour viser la data et l'IA : bibliothèques Python de data science (pandas, NumPy, scikit-learn), SQL, apprentissage automatique et Git. Je compte les pratiquer sur des données ouvertes de matchs de football.</p>
+        <p data-l="en">To move towards data and AI: Python data science libraries (pandas, NumPy, scikit-learn), SQL, machine learning and Git. I plan to practise them on open football match data.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= MOBILITÉ ======================= -->
+<section class="panel" id="mobility" data-panel="mobility">
+  <div class="wrap">
+    <div class="panel-head">
+      <h2><span data-l="fr">Mobilité internationale</span><span data-l="en">International mobility</span></h2>
+      <p data-l="fr">De Casablanca à Toulouse, et demain vers les pôles mondiaux de la data sportive, de l'aéronautique et du spatial.</p>
+      <p data-l="en">From Casablanca to Toulouse, and next to the world's hubs for sports data, aviation and space.</p>
+    </div>
+
+    <div class="subnav" role="tablist" aria-label="Mobilité">
+      <button type="button" role="tab" data-sub="projects"><span data-l="fr">Projets de mobilité</span><span data-l="en">Mobility projects</span></button>
+      <button type="button" role="tab" data-sub="languages"><span data-l="fr">Langues et parcours international</span><span data-l="en">Languages and international background</span></button>
+    </div>
+
+    <div class="sub" data-subpanel="projects" role="tabpanel">
+      <p data-l="fr" class="muted">Le diplôme exige une mobilité d'au moins 17 semaines. Voici mes trois pistes, chacune alignée avec l'un de mes <a href="#career/rolemodels">profils de référence</a>.</p>
+      <p data-l="en" class="muted">The degree requires at least 17 weeks abroad. Here are my three options, each aligned with one of my <a href="#career/rolemodels">role model profiles</a>.</p>
+
+      <article class="block trip">
+        <div class="trip-code">LON<small><span data-l="fr">Royaume-Uni</span><span data-l="en">United Kingdom</span></small></div>
+        <div>
+          <h3><span data-l="fr">Londres : la data au service du football</span><span data-l="en">London: data for football</span></h3>
+          <div data-l="fr">
+            <p>Londres concentre des clubs de Premier League dotés de cellules data et des fournisseurs de données comme Hudl StatsBomb, référence mondiale de l'analyse de matchs.</p>
+            <dl class="facts"><dt>Format visé</dt><dd>Stage de 2e année ou semestre de mobilité</dd><dt>Profil lié</dt><dd>Data scientist dans le football</dd><dt>À préparer</dt><dd>Projets personnels sur données de matchs, anglais certifié B2+</dd></dl>
+          </div>
+          <div data-l="en">
+            <p>London is home to Premier League clubs with in-house data teams and to data providers such as Hudl StatsBomb, a global reference in match analysis.</p>
+            <dl class="facts"><dt>Target format</dt><dd>Second-year internship or exchange semester</dd><dt>Linked profile</dt><dd>Football data scientist</dd><dt>To prepare</dt><dd>Personal projects on match data, certified B2+ English</dd></dl>
+          </div>
+        </div>
+      </article>
+
+      <article class="block trip">
+        <div class="trip-code">YUL<small><span data-l="fr">Canada</span><span data-l="en">Canada</span></small></div>
+        <div>
+          <h3><span data-l="fr">Montréal : IA et aéronautique</span><span data-l="en">Montreal: AI and aerospace</span></h3>
+          <div data-l="fr">
+            <p>Montréal réunit l'un des grands centres de recherche mondiaux en IA (Mila) et un pôle aéronautique majeur (Bombardier, CAE, Pratt &amp; Whitney Canada), le tout en français et en anglais.</p>
+            <dl class="facts"><dt>Format visé</dt><dd>Semestre d'études en université partenaire ou stage</dd><dt>Profil lié</dt><dd>Data scientist dans l'aéronautique</dd><dt>À préparer</dt><dd>Bases solides en apprentissage automatique, dossier d'échange</dd></dl>
+          </div>
+          <div data-l="en">
+            <p>Montreal combines one of the world's leading AI research centres (Mila) with a major aerospace cluster (Bombardier, CAE, Pratt &amp; Whitney Canada), in both French and English.</p>
+            <dl class="facts"><dt>Target format</dt><dd>Exchange semester at a partner university, or internship</dd><dt>Linked profile</dt><dd>Aviation data scientist</dd><dt>To prepare</dt><dd>Solid machine learning foundations, exchange application</dd></dl>
+          </div>
+        </div>
+      </article>
+
+      <article class="block trip">
+        <div class="trip-code">FRA<small><span data-l="fr">Allemagne, près de Francfort</span><span data-l="en">Germany, near Frankfurt</span></small></div>
+        <div>
+          <h3><span data-l="fr">Darmstadt : l'IA pour les opérations spatiales</span><span data-l="en">Darmstadt: AI for space operations</span></h3>
+          <div data-l="fr">
+            <p>Darmstadt accueille l'ESOC, le centre d'opérations des missions de l'Agence spatiale européenne, qui propose des stages en IA, data et jumeaux numériques.</p>
+            <dl class="facts"><dt>Format visé</dt><dd>Stage de fin d'études ou programme jeunes diplômés de l'ESA</dd><dt>Profil lié</dt><dd>Ingénieur IA pour le spatial</dd><dt>À préparer</dt><dd>Optimisation et séries temporelles, bases d'allemand</dd></dl>
+          </div>
+          <div data-l="en">
+            <p>Darmstadt hosts ESOC, the European Space Agency's mission operations centre, which offers internships in AI, data and digital twins.</p>
+            <dl class="facts"><dt>Target format</dt><dd>Final-year internship or ESA graduate programme</dd><dt>Linked profile</dt><dd>Space AI engineer</dd><dt>To prepare</dt><dd>Optimisation and time series, basic German</dd></dl>
+          </div>
+        </div>
+      </article>
+
+      <p class="muted small" style="margin-top:20px" data-l="fr">Autres pistes à explorer : Barcelone (analyse de données sportives), les Pays-Bas (ESA ESTEC, TU Delft), Hambourg (site Airbus).</p>
+      <p class="muted small" style="margin-top:20px" data-l="en">Other leads to explore: Barcelona (sports analytics), the Netherlands (ESA ESTEC, TU Delft), Hamburg (Airbus site).</p>
+    </div>
+
+    <div class="sub" data-subpanel="languages" role="tabpanel">
+      <div class="grid-2">
+        <div class="block">
+          <h3><span data-l="fr">Ma première mobilité</span><span data-l="en">My first move abroad</span></h3>
+          <p data-l="fr">J'ai grandi et étudié à Casablanca jusqu'en 2026, puis j'ai rejoint Toulouse pour intégrer l'ENSEEIHT. S'adapter à un nouveau pays, à un nouveau système d'études et à une nouvelle ville est déjà une première expérience internationale, que je veux prolonger pendant ma scolarité.</p>
+          <p data-l="en">I grew up and studied in Casablanca until 2026, then moved to Toulouse to join ENSEEIHT. Adapting to a new country, a new education system and a new city is already a first international experience, one I want to build on during my studies.</p>
+        </div>
+        <div class="block">
+          <h3><span data-l="fr">Langues</span><span data-l="en">Languages</span></h3>
+          <dl class="facts" data-l="fr">
+            <dt>Français</dt><dd>Courant</dd>
+            <dt>Anglais</dt><dd>Courant, certification B2+ visée (exigence du diplôme)</dd>
+            <dt>Arabe</dt><dd>Courant</dd>
+            <dt>LV2</dt><dd>À compléter</dd>
+          </dl>
+          <dl class="facts" data-l="en">
+            <dt>French</dt><dd>Fluent</dd>
+            <dt>English</dt><dd>Fluent, aiming for B2+ certification (degree requirement)</dd>
+            <dt>Arabic</dt><dd>Fluent</dd>
+            <dt>Second foreign language</dt><dd>To be added</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= DÉVELOPPEMENT DURABLE ======================= -->
+<section class="panel" id="sustainability" data-panel="sustainability">
+  <div class="wrap">
+    <div class="panel-head">
+      <h2><span data-l="fr">Développement durable et engagement citoyen</span><span data-l="en">Sustainability and civic engagement</span></h2>
+      <p data-l="fr">Être utile aux autres, et réfléchir à l'impact des technologies que je veux construire.</p>
+      <p data-l="en">Being useful to others, and thinking about the impact of the technologies I want to build.</p>
+    </div>
+    <div class="grid-2">
+      <article class="block block-feature">
+        <p class="kicker"><span data-l="fr">Engagement solidaire</span><span data-l="en">Community work</span></p>
+        <h3><span data-l="fr">Distribution de repas et de couvertures aux personnes sans abri</span><span data-l="en">Distributing meals and blankets to homeless people</span></h3>
+        <p data-l="fr">J'ai participé à des distributions de repas et de couvertures auprès de personnes sans abri. Préparer, s'organiser en équipe, aller à la rencontre des gens : cette expérience m'a appris l'écoute et m'a rappelé que l'efficacité n'a de sens que si elle sert quelqu'un.</p>
+        <p data-l="en">I took part in distributing meals and blankets to homeless people. Preparing, organising as a team and meeting people taught me to listen, and reminded me that efficiency only matters when it serves someone.</p>
+      </article>
+      <article class="block">
+        <p class="kicker"><span data-l="fr">Réflexion</span><span data-l="en">Reflection</span></p>
+        <h3><span data-l="fr">Optimiser, c'est aussi consommer moins</span><span data-l="en">Optimising also means consuming less</span></h3>
+        <p data-l="fr">Les algorithmes de mon TIPE réduisent la distance parcourue. Appliqués à l'aviation, des trajectoires et une maintenance mieux optimisées réduisent la consommation de carburant. Mais l'IA a elle aussi un coût énergétique : je veux apprendre à concevoir des modèles sobres, dont le bénéfice justifie le calcul.</p>
+        <p data-l="en">The algorithms from my research project reduce the distance travelled. Applied to aviation, better-optimised trajectories and maintenance cut fuel consumption. But AI has an energy cost too: I want to learn to design frugal models whose benefit justifies the computation.</p>
+      </article>
+    </div>
+    <div class="block" style="margin-top:20px">
+      <h3><span data-l="fr">Objectif d'ici le semestre 9</span><span data-l="en">Goal before semester 9</span></h3>
+      <p data-l="fr">Réaliser les 40 heures d'engagement citoyen demandées par le diplôme, idéalement dans une association d'aide aux personnes en difficulté ou de soutien scolaire à Toulouse. Les actions seront documentées ici.</p>
+      <p data-l="en">Complete the 40 hours of civic engagement required for the degree, ideally with an association helping people in need or offering tutoring in Toulouse. Each action will be documented here.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= SPORT ======================= -->
+<section class="panel" id="sport" data-panel="sport">
+  <div class="wrap">
+    <div class="panel-head">
+      <h2><span data-l="fr">Sport et autres activités</span><span data-l="en">Sport and other activities</span></h2>
+      <p data-l="fr">Le terrain et les sentiers m'apprennent autant que les salles de cours.</p>
+      <p data-l="en">The pitch and the trails teach me as much as the classroom.</p>
+    </div>
+    <div class="grid-3">
+      <article class="block block-feature">
+        <h3><span data-l="fr">Football en club</span><span data-l="en">Club football</span></h3>
+        <p data-l="fr">Je joue au football en club. Les entraînements réguliers, l'exigence collective et la lecture du jeu sont à l'origine de mon envie de travailler sur la data du football : comprendre avec des chiffres ce que je ressens sur le terrain.</p>
+        <p data-l="en">I play club football. Regular training, team discipline and reading the game are what made me want to work with football data: understanding through numbers what I feel on the pitch.</p>
+      </article>
+      <article class="block">
+        <h3><span data-l="fr">Randonnée</span><span data-l="en">Hiking</span></h3>
+        <p data-l="fr">La randonnée m'apprend l'endurance et la préparation : choisir un itinéraire, gérer son effort, s'adapter à la météo. Encore une histoire d'optimisation de trajet.</p>
+        <p data-l="en">Hiking teaches me endurance and preparation: choosing a route, pacing myself, adapting to the weather. Another story of route optimisation.</p>
+      </article>
+      <article class="block">
+        <h3><span data-l="fr">Transmettre les maths</span><span data-l="en">Teaching maths</span></h3>
+        <p data-l="fr">En 2025 et 2026, j'ai donné des cours particuliers de mathématiques. Expliquer simplement une notion difficile est une compétence que je veux garder : un data scientist doit convaincre des non-spécialistes.</p>
+        <p data-l="en">In 2025 and 2026 I gave private maths lessons. Explaining a hard concept simply is a skill I want to keep: a data scientist has to convince non-specialists.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PROJET PRO ======================= -->
+<section class="panel" id="career" data-panel="career">
+  <div class="wrap">
+    <div class="panel-head">
+      <h2><span data-l="fr">Projet professionnel</span><span data-l="en">Career development</span></h2>
+      <p data-l="fr">Devenir data scientist ou ingénieur en IA dans le football, l'aéronautique ou le spatial.</p>
+      <p data-l="en">Becoming a data scientist or AI engineer in football, aviation or space.</p>
+    </div>
+
+    <div class="subnav" role="tablist" aria-label="Projet professionnel">
+      <button type="button" role="tab" data-sub="project"><span data-l="fr">Mon projet</span><span data-l="en">My career project</span></button>
+      <button type="button" role="tab" data-sub="rolemodels"><span data-l="fr">Profils de référence</span><span data-l="en">Role models</span></button>
+      <button type="button" role="tab" data-sub="internships"><span data-l="fr">Stages</span><span data-l="en">Internships</span></button>
+      <button type="button" role="tab" data-sub="cv">CV &amp; LinkedIn</button>
+      <button type="button" role="tab" data-sub="pitch"><span data-l="fr">Pitch vidéo</span><span data-l="en">Video pitch</span></button>
+    </div>
+
+    <!-- Mon projet -->
+    <div class="sub" data-subpanel="project" role="tabpanel">
+      <div class="grid-2">
+        <div class="block block-feature">
+          <h3><span data-l="fr">Ma proposition de valeur</span><span data-l="en">My unique value proposition</span></h3>
+          <p data-l="fr">Un profil de mathématiques appliquées formé à l'optimisation et aux probabilités, trilingue, passionné de football et attiré par l'aérospatial, qui veut transformer des données en décisions concrètes : recruter le bon joueur, anticiper une panne d'avion, planifier une mission spatiale.</p>
+          <p data-l="en">An applied-maths profile trained in optimisation and probability, trilingual, passionate about football and drawn to aerospace, who wants to turn data into concrete decisions: signing the right player, anticipating an aircraft failure, planning a space mission.</p>
+        </div>
+        <div class="block">
+          <h3><span data-l="fr">Expérience</span><span data-l="en">Experience</span></h3>
+          <p class="kicker"><span data-l="fr">Cours particuliers de mathématiques, 2025 – 2026</span><span data-l="en">Private maths tutor, 2025 – 2026</span></p>
+          <p data-l="fr">J'ai accompagné des élèves en mathématiques : identifier leurs blocages, adapter les explications et les exercices, suivre leur progression. Cette expérience a renforcé ma rigueur et ma capacité à vulgariser.</p>
+          <p data-l="en">I supported students in maths: identifying where they were stuck, adapting explanations and exercises, and tracking their progress. It strengthened my rigour and my ability to explain complex ideas simply.</p>
+        </div>
+      </div>
+      <div class="block" style="margin-top:20px">
+        <h3><span data-l="fr">Feuille de route</span><span data-l="en">Roadmap</span></h3>
+        <ol class="timeline">
+          <li class="current"><span class="when">S5 – S6</span><h3><span data-l="fr">Consolider les bases</span><span data-l="en">Build the foundations</span></h3><p class="muted" data-l="fr">Probabilités, optimisation, programmation. Premiers projets personnels en Python sur des données ouvertes de football. Entretiens My Job Glasses.</p><p class="muted" data-l="en">Probability, optimisation, programming. First personal Python projects on open football data. My Job Glasses interviews.</p></li>
+          <li><span class="when"><span data-l="fr">Été 2027</span><span data-l="en">Summer 2027</span></span><h3><span data-l="fr">Premier stage</span><span data-l="en">First internship</span></h3><p class="muted" data-l="fr">Découvrir une équipe data dans l'un de mes trois secteurs, à Toulouse si possible.</p><p class="muted" data-l="en">Discover a data team in one of my three sectors, ideally in Toulouse.</p></li>
+          <li><span class="when">S7 – S8</span><h3><span data-l="fr">Se spécialiser en IA et data</span><span data-l="en">Specialise in AI and data</span></h3><p class="muted" data-l="fr">Choix de parcours orienté apprentissage automatique et données, stage de 2e année, idéalement à l'étranger.</p><p class="muted" data-l="en">Choose a machine learning and data-oriented specialisation, second-year internship, ideally abroad.</p></li>
+          <li><span class="when">S9 – S10</span><h3><span data-l="fr">Mobilité et projet de fin d'études</span><span data-l="en">Mobility and final-year project</span></h3><p class="muted" data-l="fr">Mobilité internationale de 17 semaines puis stage de fin d'études dans le secteur visé.</p><p class="muted" data-l="en">17-week international mobility, then a final-year internship in the target sector.</p></li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Profils de référence -->
+    <div class="sub" data-subpanel="rolemodels" role="tabpanel">
+      <p class="muted" data-l="fr">Trois profils types qui guident mon projet, construits à partir d'offres d'emploi et de stage réelles. Chacun sera confronté à un entretien avec un professionnel sur My Job Glasses, et cette page sera mise à jour avec ce que j'en retiens.</p>
+      <p class="muted" data-l="en">Three target profiles that guide my plan, built from real job and internship offers. Each will be tested through an interview with a professional on My Job Glasses, and this page will be updated with what I learn.</p>
+      <div class="grid-3" style="margin-top:16px">
+        <article class="block block-feature">
+          <span class="status"><span data-l="fr">Entretien à planifier</span><span data-l="en">Interview to schedule</span></span>
+          <h3 style="margin-top:12px"><span data-l="fr">Data scientist dans le football</span><span data-l="en">Football data scientist</span></h3>
+          <div data-l="fr">
+            <p class="muted small">Cellule data d'un club (le Toulouse FC est réputé pour son recrutement piloté par la data) ou fournisseur de données comme Hudl StatsBomb.</p>
+            <h4>Missions</h4>
+            <ul class="clean small"><li>Modèles d'évaluation des joueurs et des actions de jeu</li><li>Aide au recrutement et détection de talents</li><li>Rapports pour le staff technique</li></ul>
+            <h4>Compétences à développer</h4>
+            <p class="small">Statistiques, Python et SQL, apprentissage automatique, communication avec des non-spécialistes.</p>
+          </div>
+          <div data-l="en">
+            <p class="muted small">A club's data team (Toulouse FC is known for its data-driven recruitment) or a data provider such as Hudl StatsBomb.</p>
+            <h4>What they do</h4>
+            <ul class="clean small"><li>Models to evaluate players and on-ball actions</li><li>Recruitment support and talent identification</li><li>Reports for the coaching staff</li></ul>
+            <h4>Skills to build</h4>
+            <p class="small">Statistics, Python and SQL, machine learning, communicating with non-specialists.</p>
+          </div>
+        </article>
+        <article class="block block-feature">
+          <span class="status"><span data-l="fr">Entretien à planifier</span><span data-l="en">Interview to schedule</span></span>
+          <h3 style="margin-top:12px"><span data-l="fr">Data scientist dans l'aéronautique</span><span data-l="en">Aviation data scientist</span></h3>
+          <div data-l="fr">
+            <p class="muted small">Airbus à Toulouse ou Hambourg, autour de Skywise, la plateforme de données aéronautiques du groupe.</p>
+            <h4>Missions</h4>
+            <ul class="clean small"><li>Maintenance prédictive à partir des données de vol</li><li>Optimisation de la chaîne d'approvisionnement</li><li>Outils d'IA pour l'ingénierie</li></ul>
+            <h4>Compétences à développer</h4>
+            <p class="small">Apprentissage automatique, séries temporelles, optimisation, traitement de grands volumes de données.</p>
+          </div>
+          <div data-l="en">
+            <p class="muted small">Airbus in Toulouse or Hamburg, around Skywise, the group's aviation data platform.</p>
+            <h4>What they do</h4>
+            <ul class="clean small"><li>Predictive maintenance from flight data</li><li>Supply chain optimisation</li><li>AI tools for engineering teams</li></ul>
+            <h4>Skills to build</h4>
+            <p class="small">Machine learning, time series, optimisation, large-scale data processing.</p>
+          </div>
+        </article>
+        <article class="block block-feature">
+          <span class="status"><span data-l="fr">Entretien à planifier</span><span data-l="en">Interview to schedule</span></span>
+          <h3 style="margin-top:12px"><span data-l="fr">Ingénieur IA pour le spatial</span><span data-l="en">Space AI engineer</span></h3>
+          <div data-l="fr">
+            <p class="muted small">CNES à Toulouse ou ESOC, le centre d'opérations de l'Agence spatiale européenne à Darmstadt.</p>
+            <h4>Missions</h4>
+            <ul class="clean small"><li>Détection d'anomalies dans la télémétrie des satellites</li><li>Jumeaux numériques de systèmes spatiaux</li><li>Planification de missions, un problème d'optimisation proche de mon TIPE</li></ul>
+            <h4>Compétences à développer</h4>
+            <p class="small">Optimisation combinatoire, probabilités, apprentissage automatique, rigueur des systèmes critiques.</p>
+          </div>
+          <div data-l="en">
+            <p class="muted small">CNES in Toulouse or ESOC, the European Space Agency's operations centre in Darmstadt.</p>
+            <h4>What they do</h4>
+            <ul class="clean small"><li>Anomaly detection in satellite telemetry</li><li>Digital twins of space systems</li><li>Mission planning, an optimisation problem close to my research project</li></ul>
+            <h4>Skills to build</h4>
+            <p class="small">Combinatorial optimisation, probability, machine learning, rigour for critical systems.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Stages -->
+    <div class="sub" data-subpanel="internships" role="tabpanel">
+      <div class="grid-2">
+        <div class="block block-feature">
+          <h3><span data-l="fr">Stage de 1re année, été 2027</span><span data-l="en">First-year internship, summer 2027</span></h3>
+          <p data-l="fr">Je recherche un stage en data ou en IA, de préférence à Toulouse :</p>
+          <p data-l="en">I am looking for a data or AI internship, ideally in Toulouse:</p>
+          <ul class="clean" data-l="fr">
+            <li><strong>Football :</strong> cellule data du Toulouse FC, start-up toulousaine de la tech sportive</li>
+            <li><strong>Aéronautique :</strong> équipes data et digital d'Airbus</li>
+            <li><strong>Spatial :</strong> CNES, Thales Alenia Space</li>
+            <li><strong>Recherche :</strong> laboratoire toulousain en optimisation ou en IA (IRIT, LAAS-CNRS)</li>
+          </ul>
+          <ul class="clean" data-l="en">
+            <li><strong>Football:</strong> Toulouse FC's data team, Toulouse sports-tech start-ups</li>
+            <li><strong>Aviation:</strong> Airbus data and digital teams</li>
+            <li><strong>Space:</strong> CNES, Thales Alenia Space</li>
+            <li><strong>Research:</strong> a Toulouse lab working on optimisation or AI (IRIT, LAAS-CNRS)</li>
+          </ul>
+          <p class="small muted" data-l="fr">Vous avez une opportunité ? <a href="mailto:riadyouness13@gmail.com">Écrivez-moi</a>.</p>
+          <p class="small muted" data-l="en">Have an opportunity? <a href="mailto:riadyouness13@gmail.com">Email me</a>.</p>
+        </div>
+        <div class="block">
+          <h3><span data-l="fr">Stages suivants</span><span data-l="en">Later internships</span></h3>
+          <dl class="facts" data-l="fr">
+            <dt>2e année</dt><dd>Stage à l'international en data, à Londres ou Montréal</dd>
+            <dt>3e année</dt><dd>Stage de fin d'études en IA dans l'aéronautique ou le spatial, en France ou à l'ESA</dd>
+          </dl>
+          <dl class="facts" data-l="en">
+            <dt>Second year</dt><dd>Data internship abroad, in London or Montreal</dd>
+            <dt>Final year</dt><dd>AI internship in aviation or space, in France or at ESA</dd>
+          </dl>
+          <p class="small muted" style="margin-top:16px" data-l="fr">Les rapports et retours d'expérience de chaque stage seront publiés ici.</p>
+          <p class="small muted" style="margin-top:16px" data-l="en">Reports and takeaways from each internship will be published here.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CV & LinkedIn -->
+    <div class="sub" data-subpanel="cv" role="tabpanel">
+      <div class="grid-3">
+        <div class="block">
+          <h3>CV <span data-l="fr">en français</span><span data-l="en">in French</span></h3>
+          <p class="muted small" data-l="fr">Une page, format PDF.</p>
+          <p class="muted small" data-l="en">One page, PDF.</p>
+          <a class="btn btn-primary" href="cv/CV_Riad_Youness_FR.pdf" target="_blank" rel="noopener"><span data-l="fr">Ouvrir le CV</span><span data-l="en">Open résumé</span></a>
+        </div>
+        <div class="block">
+          <h3>CV <span data-l="fr">en anglais</span><span data-l="en">in English</span></h3>
+          <p class="muted small" data-l="fr">Une page, format PDF.</p>
+          <p class="muted small" data-l="en">One page, PDF.</p>
+          <a class="btn btn-primary" href="cv/CV_Riad_Youness_EN.pdf" target="_blank" rel="noopener"><span data-l="fr">Ouvrir le CV</span><span data-l="en">Open résumé</span></a>
+        </div>
+        <div class="block">
+          <h3>LinkedIn</h3>
+          <p class="muted small" id="linkedin-note"><span data-l="fr">Profil en français et en anglais.</span><span data-l="en">Profile in French and English.</span></p>
+          <a class="btn btn-ghost" id="linkedin-btn" href="#" target="_blank" rel="noopener"><span data-l="fr">Voir mon profil</span><span data-l="en">View my profile</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pitch vidéo -->
+    <div class="sub" data-subpanel="pitch" role="tabpanel">
+      <div class="grid-2" style="align-items:start">
+        <div class="video" id="video">
+          <div>
+            <strong><span data-l="fr">Vidéo bientôt en ligne</span><span data-l="en">Video coming soon</span></strong>
+            <p><span data-l="fr">Pitch de 2 à 3 minutes en anglais.</span><span data-l="en">A 2–3 minute pitch in English.</span></p>
+          </div>
+        </div>
+        <div class="block">
+          <h3><span data-l="fr">Mon pitch en 3 temps</span><span data-l="en">My pitch in three parts</span></h3>
+          <ol class="clean" data-l="fr">
+            <li><strong>Aujourd'hui :</strong> élève-ingénieur en Sciences du Numérique à l'ENSEEIHT, passionné d'optimisation.</li>
+            <li><strong>D'où je viens :</strong> Casablanca, prépa MP, un TIPE sur le voyageur de commerce.</li>
+            <li><strong>Où je vais :</strong> la data et l'IA pour le football, l'aviation et l'espace, à travers trois profils de référence et trois projets de mobilité.</li>
+          </ol>
+          <ol class="clean" data-l="en">
+            <li><strong>Present:</strong> engineering student in Computer Science &amp; Applied Maths at ENSEEIHT, passionate about optimisation.</li>
+            <li><strong>Past:</strong> Casablanca, MP preparatory class, a research project on the travelling salesman problem.</li>
+            <li><strong>Future:</strong> data and AI for football, aviation and space, through three role models and three mobility projects.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <span>Riad Youness, <a href="mailto:riadyouness13@gmail.com">riadyouness13@gmail.com</a></span>
+    <span><a href="https://github.com/RiadYouness" target="_blank" rel="noopener">GitHub</a> <span id="footer-linkedin"></span></span>
+    <span><span data-l="fr">Mis à jour en novembre 2026</span><span data-l="en">Updated November 2026</span></span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
