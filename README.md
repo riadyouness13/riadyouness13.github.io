@@ -1,17 +1,17 @@
-# ePortfolio de Riad Youness
+# ePortfolio de Youness Riad
 
 Site statique (HTML, CSS, JavaScript) bilingue français / anglais, publié avec GitHub Pages à l'adresse :
-**https://riadyouness.github.io**
+**https://riadyouness13.github.io**
 
 ## Mettre le site en ligne (10 minutes)
 
-1. Connecte-toi sur github.com avec le compte **RiadYouness**.
-2. Clique sur **New repository**. Nomme-le exactement `RiadYouness.github.io`, laisse-le **Public**, puis **Create repository**.
+1. Connecte-toi sur github.com avec le compte **riadyouness13**.
+2. Clique sur **New repository**. Nomme-le exactement `riadyouness13.github.io` (le nom du compte suivi de .github.io), laisse-le **Public**, puis **Create repository**.
 3. Sur la page du dépôt vide, clique sur **uploading an existing file**.
-4. Glisse **tout le contenu** du dossier `portfolio` (pas le dossier lui-même) : `index.html`, `style.css`, `script.js`, `README.md` et les dossiers `assets` et `cv`.
+4. Ouvre le dossier `portfolio` dans l'explorateur de fichiers, sélectionne **tout son contenu** (les fichiers ET les dossiers `assets` et `cv`) et fais-le glisser dans la page. Ne passe pas par « choose your files » : ce bouton n'envoie pas les dossiers.
 5. Clique sur **Commit changes**.
 6. Va dans **Settings → Pages** : vérifie que la source est **Deploy from a branch**, branche `main`, dossier `/ (root)`.
-7. Attends 1 à 2 minutes, puis ouvre https://riadyouness.github.io
+7. Attends 1 à 2 minutes, puis ouvre https://riadyouness13.github.io
 
 Pour le rendu Moodle, dépose le lien du site (et les deux CV si un fichier est demandé).
 

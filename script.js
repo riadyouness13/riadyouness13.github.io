@@ -13,8 +13,8 @@ const CONFIG = {
    Langue FR / EN
    ========================================================== */
 const TITLES = {
-  fr: "Riad Youness — ePortfolio",
-  en: "Riad Youness — ePortfolio"
+  fr: "Youness Riad — ePortfolio",
+  en: "Youness Riad — ePortfolio"
 };
 
 function getStoredLang() {
@@ -101,7 +101,7 @@ if (CONFIG.linkedin) {
 if (CONFIG.youtubeId) {
   document.getElementById("video").innerHTML =
     '<iframe src="https://www.youtube-nocookie.com/embed/' + encodeURIComponent(CONFIG.youtubeId) +
-    '" title="Pitch vidéo de Riad Youness" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    '" title="Pitch vidéo de Youness Riad" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 }
 
 /* ==========================================================
@@ -311,6 +311,7 @@ if (CONFIG.youtubeId) {
     path.setAttribute("d", "M" + pts.join(" L"));
     if (!reduceMotion) {
       const L = path.getTotalLength();
+      if (!L) return updateStats();
       path.style.transition = "none";
       path.style.strokeDasharray = L;
       path.style.strokeDashoffset = L;
