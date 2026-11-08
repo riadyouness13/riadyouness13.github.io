@@ -6,7 +6,7 @@ const CONFIG = {
   linkedin: "",
   // Identifiant YouTube de la vidéo pitch (ce qui suit "v=" dans l'URL).
   // Exemple : pour https://www.youtube.com/watch?v=abc123XYZ → "abc123XYZ"
-  youtubeId: ""
+  youtubeId: "8kWOdm09W7Q"
 };
 
 /* ==========================================================
