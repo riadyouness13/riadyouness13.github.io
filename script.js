@@ -100,8 +100,11 @@ if (CONFIG.linkedin) {
 
 if (CONFIG.youtubeId) {
   document.getElementById("video").innerHTML =
-    '<iframe src="https://www.youtube-nocookie.com/embed/' + encodeURIComponent(CONFIG.youtubeId) +
-    '" title="Pitch vidéo de Youness Riad" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    '<iframe src="https://www.youtube.com/embed/' + encodeURIComponent(CONFIG.youtubeId) + '?rel=0"' +
+    ' title="Pitch vidéo de Youness Riad"' +
+    ' referrerpolicy="strict-origin-when-cross-origin"' +
+    ' allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"' +
+    ' allowfullscreen></iframe>';
 }
 
 /* ==========================================================
